@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Candefit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <section class="hero is-primary is-medium">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    LA VERDAD ABSOLUTA DE LAS CALORIAS
+                </h1>
+            </div>
+        </div>
+    </section>
+    <div class="tile is-ancestor">
+        <div class="tile is-parent">
+            <article class="tile is-child box">
+                <p class="title">1- La Cantidad de lo que comemos es lo que tiene importancia aquí</p>
+            </article>
+        </div>
+
+        <div class="tile is-parent">
+            <article class="tile is-child box">
+                <p class="title">FAMILIA</p>
+                <div class="content">
+                    <p>Entendiento esto, puedes comer muy "sano" y no perder un solo gramo de peso, la única manera de
+                        perder peso es
+                        LOGRAR UN DEFICIT CALORICO durante el día, es decir, que gastes mas calorías de las que comes o
+                        dicho de otra forma
+                        que comas menos calorías de las que gastas.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+            <div class="tile">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child box">
+                        <p class="title">2- Que la calidad es importante porque afecta como bajo de peso, es otra
+                            cosa¡¡¡</p>
+                    </article>
+                    <article class="tile is-child box">
+                        <p class="title">3- Hay alimentos con mas beneficios a nivel nutricional que otros, eso los
+                            diferencia y ayuda mucho a la hora de perder
+                            grasa o solo peso.</p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <p class="title">¡Es tu desición!</p>
+
+                        <figure class="image is-4by3">
+                            <img src="unnamed.jpg">
+                        </figure>
+                    </article>
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">4- AHORA BIEN:</p>
+
+                    <div class="content">
+                        <p>¿Que comiendo los alimentos de alto valor nutricional, la cantidad de proteina suficiente y
+                            una distribución
+                            adecuada de grasas y carbos me aseguran un resultado más eficiente visualmente mucho mejor y
+                            garantizan mi salud?,
+                            es cierto también, pero nada de esto quiere decir que hayan alimentos que por su naturaleza
+                            engorden y otros que
+                            adelgacen.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child box">
+                <div class="content">
+                    <p class="title">¿Cuántas Calorias gastas en un día?</p>
+                    <p class="subtitle">With even more content</p>
+                    <div class="content">
+                        <select name="sexo">
+
+                            <option>Hombre</option>
+
+                            <option>Mujer</option>
+                        </select>
+
+                        <p></p>
+                        <p>Peso <br />
+                            <input type="text" id="peso" /></p>
+
+                        <p>Altura <br />
+                            <input type="text" id="altura" /></p>
+
+                        <P>Edad <br />
+                            <input type="text" id="edad" /></P>
+                        <p>
+                            <p></p>
+                            <input type="button" value="enviar" id="botoncito" />
+                        </p>
+
+                        <script>
+                            var boton = document.getElementById("botoncito");
+                            var texto = document.getElementById("peso");
+                            var texto = document.getElementById("altura");
+                            var texto = document.getElementById("edad");
+
+                            boton.addEventListener("click", totalizar);
+
+
+                            function totalizar() {
+                                var x = parseInt(peso.value);
+                                var y = parseInt(altura.value);
+                                var z = parseInt(edad.value);
+                                var hombre = 66;
+                                var mujer = 655;
+                                var sexo;
+                                var calorias_quemadas;
+
+                                if (sexo = hombre) {
+                                    calorias_quemadas = hombre + (13.7 * x) + (5 * y) - (6.75 * z)
+                                } else if (sexo = mujer) {
+                                    calorias_quemadas = mujer + (9.6 * x) + (1.8 * y) - (4.7 * z)
+                                }
+                            }
+
+                            document.write("Tus calorias quemadas en el dia son " + calorias_quemadas);
+                        </script>
+
+                        <p></p>
+
+
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
