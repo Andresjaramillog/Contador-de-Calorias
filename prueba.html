@@ -86,7 +86,7 @@
                     <p class="title">¿Cuántas Calorias gastas en un día?</p>
                     <p class="subtitle">With even more content</p>
                     <div class="content">
-                        <select name="sexo">
+                        <select id="sexo">
 
                             <option>Hombre</option>
 
@@ -106,33 +106,40 @@
                             <p></p>
                             <input type="button" value="enviar" id="botoncito" />
                         </p>
+                        <strong id="resultado"></strong>
 
                         <script>
                             var boton = document.getElementById("botoncito");
-                            var texto = document.getElementById("peso");
-                            var texto = document.getElementById("altura");
-                            var texto = document.getElementById("edad");
+                            var peso = document.getElementById("peso");
+                            var altura = document.getElementById("altura");
+                            var edad = document.getElementById("edad");
+                            var sexo = document.getElementById("sexo");
+                            var resultado = document.getElementById("resultado");
 
                             boton.addEventListener("click", totalizar);
+                            var calorias_quemadas;
 
 
                             function totalizar() {
+                                console.log('ejecuta el botoncito');
                                 var x = parseInt(peso.value);
                                 var y = parseInt(altura.value);
                                 var z = parseInt(edad.value);
+                                var w = sexo.value;
+                                console.log('las variables peso, altura y edad y sexo son: ',x,y,z,w);
                                 var hombre = 66;
                                 var mujer = 655;
-                                var sexo;
-                                var calorias_quemadas;
-
-                                if (sexo = hombre) {
+                                if (w === 'Hombre') {
                                     calorias_quemadas = hombre + (13.7 * x) + (5 * y) - (6.75 * z)
-                                } else if (sexo = mujer) {
+                                } else {
                                     calorias_quemadas = mujer + (9.6 * x) + (1.8 * y) - (4.7 * z)
                                 }
+                                calorias_quemadas = Math.round(calorias_quemadas)
+                                resultado.innerHTML=`Tus calorias quemadas en reposo al día son: ${calorias_quemadas}.`;
+                                console.log(`Tus calorias quemadas en el día son ${calorias_quemadas} felicitaciones`);
+                                // document.write("Tus calorias quemadas en el dia son " + calorias_quemadas);
                             }
 
-                            document.write("Tus calorias quemadas en el dia son " + calorias_quemadas);
                         </script>
 
                         <p></p>
